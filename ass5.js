@@ -9,7 +9,7 @@ function getElements(arr, num) {
         }
     }
 }
-getElements(arr, num);
+console.log(getElements(arr, num));
 
 /*Answer2*/
 let str="abcdabcdefgggh";
@@ -23,7 +23,7 @@ function getUnique(str) {
     }
     return ans;
 }
-getUnique(str);
+console.log(getUnique(str));
 
 /*Answer3*/
 let country=["Australia","Germany","UnitedStatesofAmerica"];
@@ -38,4 +38,23 @@ function longestName(country) {
     }
     return country[ansIdx];
 }
-longestName(country);
+console.log(longestName(country));
+
+/*Answer4*/
+let str4="apnacollege";
+function countVowels(str4) {
+    let count = 0;
+    for (let i = 0; i < str4.length; i++) {
+        if (str4.charAt(i) == "a" || str4.charAt(i) == "e" || str4.charAt(i) == "i" || str4.charAt(i) == "o" || str4.charAt(i) == "u") {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(countVowels(str4));
+/*Answer5*/
+function generateRandom(start, end) {
+    let diff = end - start;
+    return Math.floor(Math.random() * diff) + start;
+}
+console.log(generateRandom(1, 10));
