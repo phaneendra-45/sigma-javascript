@@ -11,3 +11,10 @@ console.log(numbers.map((number) => number + 5));
 /* Answer 3 */
 let strings = ["adam", "bob", "catlyn", "donald", "eve"];
 console.log(strings.map((string) => string.toUpperCase()));
+/* Answer 4 */
+const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map((v) => v * 2)];
+console.log(doubleAndReturnArgs([1, 2, 3], 4, 4)); 
+console.log(doubleAndReturnArgs([2], 10, 4)); 
+/* Answer 5 */
+const mergeObjects=(obj1,obj2)=>({...obj1,...obj2});
+console.log(mergeObjects({a:1,b:2},{c:3,d:4}));
