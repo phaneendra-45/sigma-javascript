@@ -16,14 +16,17 @@ body{
     background-color: yellow;
 }
 .green{
-    background-color: green;
+    background-color: greenyellow;
 }
 .purple{
-    background-color: purple;
+    background-color: violet;
 }
 .red{
-    background-color: red;
+    background-color: rgb(250, 93, 93);
 }
 .flash{
     background-color: white;
+}
+.userflash{
+    background-color: green;
 }
