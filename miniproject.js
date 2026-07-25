@@ -31,11 +31,9 @@ function nextlevel() {
     let randcolor = btns[randidx];
     let randbtn = document.querySelector(`.${randcolor}`);
     gamesequence.push(randcolor);
-    console.log(gamesequence);
     gameflash(randbtn);
 }
 function btnPress() {
-    console.log(this);
     let btn = this;
     userflash(btn);
 
@@ -56,6 +54,18 @@ function checkAnswer(idx) {
                 setTimeout(nextlevel, 1000);
             }
         } else {
-            h2.innerText = "Game Over, Press any key to restart";
+            h2.innerHTML = `Game Over! Your Score was <b>${level}</b><br>Press any key to restart`;
+            document.querySelector("body").style.backgroundColor = "red";
+            setTimeout(function() {
+                document.querySelector("body").style.backgroundColor = "white";
+            }, 150);
+            reset();
         }
      }
+
+function reset() {
+    started = false;
+    level = 0;
+    gamesequence = [];
+    playersequence = [];
+}
